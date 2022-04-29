@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace MathQuiz
 {
@@ -39,9 +40,12 @@ namespace MathQuiz
 
         public Form1()
         {
+            this.BackgroundImage = Properties.Resources.images;
             InitializeComponent();
             time();
-            
+            SoundPlayer simpleSound = new SoundPlayer(@"C:\Users\Laker\Downloads\lobby-classic-game-halloween.wav");
+            simpleSound.Play();
+
         }
         public void StartTheQuiz()
         {
